@@ -1,4 +1,7 @@
 "use strict";
+
+
+
 /* Задание на урок:
 
 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
@@ -23,6 +26,44 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 
+/*const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+
+for (let i = 0; i < 2; i++) {
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', '');
+
+      if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+      } else {
+    console.log('error');
+       i--;                  //Вернутся на 1 повторение(итнрацию цикла назад)
+      }
+}
+       if (personalMovieDB.count < 10) {
+        console.log ('Просмотренно довольно мало фильмов');
+       } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+           console.log ('Вы классический зритель');
+           } else if (personalMovieDB.count >= 30) {
+            console.log('Вы киноман');
+           } else {
+            console.log('Произошла ошибка');
+           }
+    
+
+
+
+console.log(personalMovieDB);
+*/
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
@@ -33,15 +74,27 @@ const personalMovieDB = {
     privat: false
 };
 
+
+for (let i = 0; i < 2; i++) {
 const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+      b = prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+      if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+      } else {
+    console.log('error');
+       i--;                  //Вернутся на 1 повторение(итнрацию цикла назад)
+      }
+}
+
+const c = (personalMovieDB.count <= 10) ? 'Просмотренно довольно мало фильмов' : 
+          (personalMovieDB.count >= 10 && personalMovieDB.count < 30) ? 'Вы классический зритель' :
+          (personalMovieDB.count >= 30) ? 'Вы киноман': 'Произошла ошибка';
+     
+
+console.log(c);
 console.log(personalMovieDB);
-
 
 
 
