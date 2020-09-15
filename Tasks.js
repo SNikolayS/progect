@@ -45,15 +45,17 @@ console.log('Мне' + ' ' + age + ' ' + 'лет' );
 const answer = prompt('Your name');
 alert (`Ваше имя ${answer}`);
 */
-const num = prompt('Guess the number','');
-if (isNaN(num) == true) {
-    alert('Вы ввели не число');
+for (let i = 0; i < 1; i++) {
+const num = prompt('Узнайте квадрат числа:','');
+if (isNaN(num) == true || num == 0 || num == '') {
+    alert('Вы не ввели число или ввели 0.Введите пожалуйсто число');
+    i--;
 } else {
 const a = Math.pow (num, 2);
 
 alert (a);
 }
-
+}
 
                                                 //Обращение к символам строки
 
